@@ -1,0 +1,194 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Ubuntu-regular";
+}
+/* fonts */
+@font-face {
+  font-family: "Ubuntu-regular";
+  src: url(/fonts/Ubuntu-Regular.woff2) format(woff2);
+}
+
+@font-face {
+  font-family: "Ubuntu-medium";
+  src: url(/fonts/Ubuntu-Medium.woff2) format(woff2);
+}
+
+main {
+  min-height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: 50vh 50vh;
+  background-image: url(/images/background.jpeg);
+  background-size: cover;
+}
+div > p {
+  font-size: 22px;
+}
+/* current day weather card */
+.mainDate {
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
+}
+.temp {
+  font-size: 80px;
+  font-family: "Ubuntu-medium";
+}
+.weatherInfo {
+  display: flex;
+  justify-content: space-around;
+}
+.iconDescription {
+  display: flex;
+  justify-content: space-around;
+  /* padding-bottom: 10px; */
+}
+.trioHeaders {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+}
+.trioData {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 15px;
+  font-family: "Ubuntu-medium";
+}
+.sun {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 25px;
+}
+
+.sunIcons {
+  display: flex;
+  justify-content: space-around;
+}
+
+#currentDay {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.mainCard {
+  border: 1px solid rgb(131, 131, 131, 0.5);
+  height: 65%;
+  width: 60%;
+  border-radius: 50px;
+  background-color: rgb(131, 131, 131, 0.5);
+  color: white;
+  align-items: center;
+}
+.mainCard:hover {
+  border: 1px solid rgb(200, 200, 200, 0.5);
+  background-color: rgb(200, 200, 200, 0.5);
+  color: black;
+}
+
+.error {
+  color: red;
+}
+
+/* weekly weather cards */
+#weekly {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+.lowerCard {
+  background-color: white;
+  height: 60%;
+  flex: 1;
+  border: 1px solid rgb(131, 131, 131, 0.5);
+  background-color: rgb(131, 131, 131, 0.5);
+  color: white;
+  display: grid;
+  grid-template-rows: 25% 25% 25% 25%;
+  border-radius: 30px;
+  align-items: center;
+}
+.lowerCard:hover {
+  border: 1px solid rgb(200, 200, 200, 0.5);
+  background-color: rgb(200, 200, 200, 0.5);
+  color: black;
+}
+.locationName {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+}
+.weeklyDate {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+}
+.locationTemp {
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.weeklyFeels {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.weeklyIcon {
+  display: flex;
+  justify-content: center;
+}
+
+.weeklyDescription {
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+}
+/* searchbar */
+.search {
+  display: inline-flex;
+  align-items: center;
+  background-color: rgb(131, 131, 131, 0.5);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+}
+.search :is(input, button) {
+  background: transparent;
+  color: inherit;
+  border: none;
+  outline: none;
+}
+.searchInput {
+  width: 0;
+  transition: 0.7s;
+  font-size: larger;
+}
+.searchButton {
+  display: grid;
+  place-items: center;
+  width: 45px;
+  height: 40px;
+  cursor: pointer;
+  transition: color 0.25s;
+}
+.searchButton:hover {
+  color: #e3e3e3;
+}
+.search:focus-within input {
+  width: 200px;
+}
+
+::placeholder {
+  font: inherit;
+  color: #e3e3e3;
+}
